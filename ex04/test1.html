@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 기본</h1>
+    <hr>
+    <button onclick="changeTitle()">제목변경</button>
+    <script>
+        function changeTitle() { //옛날 문법
+            // window는 생략 가능
+            window.alert("제목변경 클릭됨");
+            // id는 문서에서 유일해야 함
+            // class는 중복 가능
+            // element==tag는 중복 가능(h1, div)
+            let title = document.querySelector("#title");
+            title.innerHTML = "<i>반가워</i>";
+        }
+    </script>
+</body>
+
+</html>

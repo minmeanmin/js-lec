@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 두번째 버전</h1>
+    <hr>
+    <button id="btn-change">서지민</button>
+    <script>
+        let btn = document.querySelector("#btn-change");
+        btn.addEventListener("mouseover", changeTitle); // 이 때 이벤트 등록
+
+        let num = -1;
+        function changeTitle(e) { // function 이름만 등록하고 내려감
+            console.log(e);
+            let title = document.querySelector("#title");
+            num = num * -1
+            title.innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>
