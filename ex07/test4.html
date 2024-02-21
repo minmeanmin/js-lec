@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        .box {
+            margin-top: 10px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>추가, 삭제</h1>
+    <button onclick="addAppend()">append로 추가하기</button>
+
+    <div class="box" id="outerBox">
+
+    </div>
+
+    <script>
+        let n = 0;
+        function addAppend() {
+            n++;
+            let newString = `<div onclick="del(${n})" class="box" id="innerBox${n}">내부박스${n}</div>`;
+
+            $("#outerBox").append(newString);
+        }
+
+        function del(n) {
+            $(`#innerBox${n}`).remove();
+        }
+
+    </script>
+</body>
+
+</html>
